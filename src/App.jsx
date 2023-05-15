@@ -88,7 +88,7 @@ function App() {
             ref={heater1}
             className="clip"
             id="Q"
-            src="/Heater-1.mp3"
+            src="Heater-1.mp3"
             data-text="Heater 1"
           ></audio>
         </button>
@@ -103,7 +103,7 @@ function App() {
             ref={heater2}
             className="clip"
             id="W"
-            src="/Heater-2.mp3"
+            src="Heater-2.mp3"
             data-text="Heater 2"
           ></audio>
         </button>
@@ -118,7 +118,7 @@ function App() {
             ref={heater3}
             className="clip"
             id="E"
-            src="/Heater-3.mp3"
+            src="Heater-3.mp3"
             data-text="Heater 4"
           ></audio>
         </button>
@@ -133,7 +133,7 @@ function App() {
             ref={heater4}
             className="clip"
             id="A"
-            src="/Heater-4_1.mp3"
+            src="Heater-4_1.mp3"
             data-text="Heater 5"
           ></audio>
         </button>
@@ -148,7 +148,7 @@ function App() {
             ref={heater6}
             className="clip"
             id="S"
-            src="/Heater-6.mp3"
+            src="Heater-6.mp3"
             data-text="Heater 6"
           ></audio>
         </button>
@@ -163,7 +163,7 @@ function App() {
             ref={kickHat}
             className="clip"
             id="D"
-            src="/Kick_n_Hat.mp3"
+            src="Kick_n_Hat.mp3"
             data-text="Heater 7"
           ></audio>
         </button>
@@ -178,7 +178,7 @@ function App() {
             ref={rpKick}
             className="clip"
             id="Z"
-            src="/RP4_KICK_1.mp3"
+            src="RP4_KICK_1.mp3"
             data-text="Heater 8"
           ></audio>
         </button>
@@ -193,7 +193,7 @@ function App() {
             ref={cevH2}
             className="clip"
             id="X"
-            src="/Cev_H2.mp3"
+            src="Cev_H2.mp3"
             data-text="Heater 9"
           ></audio>
         </button>
@@ -208,7 +208,7 @@ function App() {
             ref={dscOh}
             className="clip"
             id="C"
-            src="/Dsc_Oh.mp3"
+            src="Dsc_Oh.mp3"
             data-text="Heater 10"
           ></audio>
         </button>
