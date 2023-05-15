@@ -1,7 +1,8 @@
 import "../style.css";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 
 function App() {
+  const [displayText, setDisplayText] = useState("");
   const heater1 = useRef(null);
   const heater2 = useRef(null);
   const heater3 = useRef(null);
@@ -14,42 +15,52 @@ function App() {
 
   useEffect(() => {
     function handleKeyDown(e) {
+      console.log(heater1.current.getAttribute("data-text"));
       switch (e.key) {
         case "Q":
         case "q":
           heater1.current.play();
+          setDisplayText(heater1.current.getAttribute("data-text"));
           break;
         case "W":
         case "w":
           heater2.current.play();
+          setDisplayText(heater2.current.getAttribute("data-text"));
           break;
         case "E":
         case "e":
           heater3.current.play();
+          setDisplayText(heater3.current.getAttribute("data-text"));
           break;
         case "A":
         case "a":
           heater4.current.play();
+          setDisplayText(heater4.current.getAttribute("data-text"));
           break;
         case "S":
         case "s":
           heater6.current.play();
+          setDisplayText(heater6.current.getAttribute("data-text"));
           break;
         case "D":
         case "d":
           kickHat.current.play();
+          setDisplayText(kickHat.current.getAttribute("data-text"));
           break;
         case "Z":
         case "z":
           rpKick.current.play();
+          setDisplayText(rpKick.current.getAttribute("data-text"));
           break;
         case "X":
         case "x":
           cevH2.current.play();
+          setDisplayText(cevH2.current.getAttribute("data-text"));
           break;
         case "C":
         case "c":
           dscOh.current.play();
+          setDisplayText(dscOh.current.getAttribute("data-text"));
           break;
         default:
           break;
@@ -60,11 +71,12 @@ function App() {
   }, []);
 
   function handleSonido(ref) {
+    setDisplayText(ref.getAttribute("data-text"));
     ref.play();
   }
   return (
     <main id="drum-machine">
-      <div id="display"></div>
+      <div id="display">{displayText}</div>
       <div className="botones">
         <button
           onClick={() => handleSonido(heater1.current)}
@@ -77,6 +89,7 @@ function App() {
             className="clip"
             id="Q"
             src="/Heater-1.mp3"
+            data-text="Heater 1"
           ></audio>
         </button>
 
@@ -91,6 +104,7 @@ function App() {
             className="clip"
             id="W"
             src="/Heater-2.mp3"
+            data-text="Heater 2"
           ></audio>
         </button>
 
@@ -105,6 +119,7 @@ function App() {
             className="clip"
             id="E"
             src="/Heater-3.mp3"
+            data-text="Heater 4"
           ></audio>
         </button>
 
@@ -119,6 +134,7 @@ function App() {
             className="clip"
             id="A"
             src="/Heater-4_1.mp3"
+            data-text="Heater 5"
           ></audio>
         </button>
 
@@ -133,6 +149,7 @@ function App() {
             className="clip"
             id="S"
             src="/Heater-6.mp3"
+            data-text="Heater 6"
           ></audio>
         </button>
 
@@ -147,6 +164,7 @@ function App() {
             className="clip"
             id="D"
             src="/Kick_n_Hat.mp3"
+            data-text="Heater 7"
           ></audio>
         </button>
 
@@ -161,6 +179,7 @@ function App() {
             className="clip"
             id="Z"
             src="/RP4_KICK_1.mp3"
+            data-text="Heater 8"
           ></audio>
         </button>
 
@@ -169,7 +188,14 @@ function App() {
           className="drum-pad"
           id="cevH2-1"
         >
-          X<audio ref={cevH2} className="clip" id="X" src="/Cev_H2.mp3"></audio>
+          X
+          <audio
+            ref={cevH2}
+            className="clip"
+            id="X"
+            src="/Cev_H2.mp3"
+            data-text="Heater 9"
+          ></audio>
         </button>
 
         <button
@@ -177,7 +203,14 @@ function App() {
           className="drum-pad"
           id="dscOh-1"
         >
-          C<audio ref={dscOh} className="clip" id="C" src="/Dsc_Oh.mp3"></audio>
+          C
+          <audio
+            ref={dscOh}
+            className="clip"
+            id="C"
+            src="/Dsc_Oh.mp3"
+            data-text="Heater 10"
+          ></audio>
         </button>
       </div>
     </main>
